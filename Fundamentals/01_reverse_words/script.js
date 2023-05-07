@@ -6,21 +6,18 @@ function reverseWords(str) {
 
 
     array_from_str.forEach(function (str) {
-        for (letter in str) {
-
-            str_reverse.unshift(str[letter]);
-            console.log(letter)
+        for (letter in word) {
+            str_reverse.unshift(word[letter]);
+            // console.log(letter)
 
             if (letter == str.length - 1) {
                 arr_reverse.push(str_reverse.join(''))
                 str_reverse = []
             }
         }
-
-
     })
 
     return arr_reverse.join(' ');
 }
 
-console.log(reverseWords("hello world sasha"))
+console.log(reverseWords("good hello world sasha"))
