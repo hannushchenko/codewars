@@ -1,16 +1,15 @@
 String.prototype.toJadenCase = function () {
     let text = this.toString().split(" ");
+    let res = []
 
-    console.log(text)
     text.forEach(word => {
-        console.log(word[0])
-
-        word[0] = word[0].toUpperCase();
-        console.log(word[0].toUpperCase())
-
+        newWord = word.split("")
+        newWord[0] = word[0].toUpperCase()
+        newWord.join()
+        console.log(newWord)
+        res.push(newWord)
     });
-
-    return text.join(" ");
+    return res.join(" ");
 };
 
 console.log("hello qq world".toJadenCase())
