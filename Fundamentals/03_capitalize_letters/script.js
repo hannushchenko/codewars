@@ -1,15 +1,54 @@
+// Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). 
+// Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, 
+// he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, 
+// check out how contractions are expected to be in the example below.
+
+// Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, 
+// but they are not capitalized in the same way he originally typed them.
+
+// Example:
+
+// Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+// Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+
 String.prototype.toJadenCase = function () {
     let text = this.toString().split(" ");
     let res = []
 
     text.forEach(word => {
-        newWord = word.split("")
-        newWord[0] = word[0].toUpperCase()
-        newWord.join()
-        console.log(newWord)
-        res.push(newWord)
+        word = word.split("");
+        let resWord = "";
+        for (let i in word) {
+
+
+
+            if (i == 0) {
+                resWord += (word[i].toUpperCase());
+                console.log(resWord);
+                if (i == word.length - 1) {
+
+                    res.push(resWord);
+                    console.log(res);
+                }
+            } else {
+                resWord += (word[i]);
+                console.log(resWord);
+                if (i == word.length - 1) {
+
+                    res.push(resWord);
+                    console.log(res);
+                }
+            }
+            //console.log(resWord);
+        }
     });
     return res.join(" ");
 };
 
-console.log("hello qq world".toJadenCase())
+console.log("hello my deatr".toJadenCase())
+
+//String.prototype.toJadenCase = function () {
+    // return this.split(" ").map(function(word){
+    //     return word.charAt(0).toUpperCase() + word.slice(1);
+    //   }).join(" ");
+    // }
