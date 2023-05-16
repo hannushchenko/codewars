@@ -23,3 +23,8 @@ console.log(feast("brown bear", "bear claw"))
 // function feast(beast, dish) {
 //   return dish.startsWith(beast[0]) && dish.endsWith(beast[beast.length-1])
 // }
+
+
+// function feast(beast, dish) {
+//   return beast.at(0) == dish.at(0) && beast.at(-1) == dish.at(-1)
+//   }
