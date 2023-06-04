@@ -1,11 +1,18 @@
-//Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case.
+//You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+// #Examples:
+// Kata.getMiddle("test") should return "es"
 
-//(In this case, all triangles must have surface greater than 0 to be accepted).
+// Kata.getMiddle("testing") should return "t"
 
-function isTriangle(a, b, c) {
-    return a + b > c && a + c > b && c + b > a ? true : false;
+// Kata.getMiddle("middle") should return "dd"
+
+// Kata.getMiddle("A") should return "A"
+
+function getMiddle(s) {
+    while (s.length > 2) {
+        s = s.slice(1, -1)
+    }
+    return s;
 }
 
-//var isTriangle = (a,b,c) => Math.max(a,b,c)<(a+b+c)/2
-
-console.log(isTriangle(4, 3, 6));
+console.log(getMiddle('Middle'));
