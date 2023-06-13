@@ -10,4 +10,4 @@ var isSquare = function (n) {
 //  return ~~n === n;
 //}
 
-console.log(descendingOrder(9))
+console.log(isSquare(9))
