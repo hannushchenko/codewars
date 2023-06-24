@@ -9,19 +9,25 @@
 // Output
 // Output will consist of a list of string values (in Haskell and C: Open or Senior) stating whether the respective member is to be placed in the senior or open category.
 
-function openOrSenior(data) {
-  let res = []
-  data.forEach(pair => {
-    if (pair[0] >= 55 && pair[1] >= 7) {
-      console.log(pair);
-      res.push("Senior")
-    }
-    else {
-      console.log(pair);
-      res.push("Open")
-    }
-  })
-  return res
-}
+// function openOrSenior(data) {
+//   let res = []
+//   data.forEach(pair => {
+//     if (pair[0] >= 55 && pair[1] >= 7) {
+//       console.log(pair);
+//       res.push("Senior")
+//     }
+//     else {
+//       console.log(pair);
+//       res.push("Open")
+//     }
+//   })
+//   return res
+// }
+
+const openOrSenior = (data) => data.map(item => (item[0] >= 55 && item[1] > 7) ? 'Senior' : 'Open')
+
+//function openOrSenior(data){
+//  return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
+//}
 
 console.log(openOrSenior([[1, 3], [5, 9], [60, 9]]))
