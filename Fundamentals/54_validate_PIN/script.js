@@ -1,7 +1,15 @@
-// Write a function which calculates the average of the numbers in a given list.
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
 
-// Note: Empty arrays should return 0.
+// If the function is passed a valid PIN string, return true, else return false.
+// Examples (Input --> Output)
 
-const findAverage = (array) => array.length === 0 ? 0 : array.reduce((cur, acc) => acc + cur, 0) / array.length
+// "1234"   -->  true
+// "12345"  -->  false
+// "a234"   -->  false
 
-console.log(findAverage([1, 2, 3, 4, 5, 6]))
+
+const validatePIN = (pin) => (pin.length === 4 || pin.length === 6) && pin.split("").map(item => item.match(/[0-9]/g)).join("") === pin
+
+//const validatePIN = pin => /^\d{4}$|^\d{6}$/.test(pin)
+
+console.log(validatePIN("1234"))
