@@ -14,4 +14,4 @@ function countPositivesSumNegatives(input) {
     return input.length === 0 || (input.length === 1 && input[0] === null) ? [] : [(input.filter(item => item > 0 && typeof item === 'number')).length, input.reduce((acc, cur) => cur < 0 && typeof cur === 'number' ? acc += cur : acc, 0)]
 }
 
-console.log(countPositivesSumNegatives([null]));
+console.log(countPositivesSumNegatives([null, 1, 2]));
